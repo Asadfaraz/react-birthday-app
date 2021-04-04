@@ -15,19 +15,22 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>{birthdays.length} birthdays today</h1>
-      <List removeItem={removeItem} birthdays={birthdays}></List>
+    <main>
+      <section className="container">
+        <h3>{birthdays.length} birthdays today</h3>
+        <List removeItem={removeItem} birthdays={birthdays}></List>
 
-      <button
-        type="button"
-        onClick={() => {
-          setBirthdays([]);
-        }}
-      >
-        Clear All
-      </button>
-    </div>
+        <button
+          className="clearBtn"
+          type="button"
+          onClick={() => {
+            setBirthdays([]);
+          }}
+        >
+          Clear All
+        </button>
+      </section>
+    </main>
   );
 }
 

@@ -1,5 +1,6 @@
 // List management
 import React from "react";
+import classes from "./list.module.css";
 
 const List = (props) => {
   console.log("props: ", props);
@@ -11,11 +12,18 @@ const List = (props) => {
         const { id, name, age, image } = birthday;
 
         return (
-          <div key={id}>
-            <h4>{name}</h4>
-            <h4>{age}</h4>
-            <img src={image} alt="" width="100px" />
+          <div className={classes.main} key={id}>
+            <article>
+              <section className={classes.imagesection}>
+                <img src={image} alt="" />
+              </section>
+              <section className={classes.headingsection}>
+                <h4 className={classes.name}>{name}</h4>
+                <h4 className={classes.age}>{age} years</h4>
+              </section>
+            </article>
             <button
+              className={classes.removeBtn}
               type="button"
               onClick={() => {
                 removeItem(id);

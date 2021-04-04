@@ -1,0 +1,52 @@
+article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+section {
+  padding: 5px;
+  margin: 10px 0;
+}
+
+section img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+section h4 {
+  margin: 0;
+}
+.name {
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.age {
+  font-weight: normal;
+}
+
+.removeBtn {
+  background: none;
+  outline: none;
+  border: none;
+  color: #f28ab2;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
+}
+.removeBtn:hover {
+  color: red;
+}
+
+@media screen and (min-width: 1000px) {
+  .main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  article {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
